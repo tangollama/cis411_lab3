@@ -1,12 +1,13 @@
-# Lab Report Template for CIS411_Lab0
+# Lab Report Template for CIS411_Lab3
 Course: Messiah College CIS 411, Fall 2018<br/>
 Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](https://github.com/trevordbunch)<br/>
+
 Name: YOUR NAME<br/>
+
 GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
 
 # Step 1: Fork this repository
 - The URL of my forked repository
-- The accompanying diagram of what my fork precisely and conceptually represents
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
@@ -22,37 +23,33 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
 }
 ```
 
-# Step 3: Creating a feature branch
-- The output of my git commit log
+# Step 3: Signup for and configure the New Relic
+- The chosen name of your New Relic ```app_name``` configuration
 ```
-d2ddea5 (HEAD -> master, origin/master, origin/HEAD) Version 0.0.1 of the lab instructions
-ab312fc more progress
-62fb0a5 more progress
-fe1937b more in the lab instructions
-3e807fb first section
-9ae6b83 remove LAB.md
-e429c1a lab instructions
-968099e remove test db
-7362cd1 working
-44ce6ae Initial commit
+app_name: ['<YOUR APP NAME>']
 ```
-- The accompanying diagram of what my feature branch precisely and conceptually represents
 
-# Step 4: Setup a Continuous Integration configuration
-- What is the .circleci/config.yml doing?
-- What do the various sections on the config file do?
-- When a CI build is successful, what does that philosophically and practically/precisely indicate about the build?
-- If you were to take the next step and ready this project for Continuous Delivery, what additional changes might you make in this configuration (conceptual, not code)?
+# Step 4: Exercising the application / generating performance data
 
-# Step 5: Merging the feature branch
-* The output of my git commit log
-* A screenshot of the _Jobs_ list in CircleCI
+_Note: No lab notes required._
 
-# Step 6: Submitting a Pull Request
-_Remember to reference at least one other student in the PR content via their GitHub handle._
+# Step 5: Explore your performance data
+* What are your observations regarding the performance of this application? 
+* Is performance even or uneven? 
+* Between queries and mutations, what requests are less performant? 
+* Among the less performant requests, which ones are the most problematic?
 
-# Step 7: [EXTRA CREDIT] Augment the core project
-PR reference in the report to one of the following:
-1. Add one or more unit tests to the core assignment project. 
-2. Configure the CircleCI config.yml to automatically build a Docker image of the project.
-3. Configure an automatic deployment of the successful CircleCI build to an Amazon EC2 instance.
+# Step 6: Diagnosing an issue based on telemetry data
+* What segment(s) took the most time?
+* Using New Relic, identify and record the least performant request(s).
+* Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
+* Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).
+
+# Step 7: Submitting a Pull Request
+_Note: No lab notes required._
+
+# Step 8: [EXTRA CREDIT] Address the performance issue(s)
+For the purposes of gaining 25% _or even more extra credit_ on the assignment, perform any of the following:
+1. Adjust the diagnosed slow call(s) to improve performance. 
+2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
+2. Check in those changes and **note your solution(s)** in your lab report.
