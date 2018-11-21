@@ -1,0 +1,37 @@
+{
+  "name": "cis411_lab3",
+  "version": "0.0.1",
+  "description": "APM installation and diagnostics.",
+  "main": "server.js",
+  "scripts": {
+    "run": "node server.js",
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tangollama/cis411_lab3.git"
+  },
+  "keywords": [
+    "git",
+    "github",
+    "circleci",
+    "graphql"
+  ],
+  "author": "Joel Worrall <joel@joelworrall.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tangollama/cis411_lab0/issues"
+  },
+  "homepage": "https://github.com/tangollama/cis411_lab0#readme",
+  "dependencies": {
+    "apollo-server": "^2.2.2",
+    "graphql": "^14.0.2",
+    "lodash.startcase": "^4.4.0",
+    "lokijs": "^1.5.5",
+    "newrelic": "^4.9.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "nyc": "^13.1.0"
+  }
+}
