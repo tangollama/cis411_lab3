@@ -2,12 +2,12 @@
 Course: Messiah College CIS 411, Fall 2018<br/>
 Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](https://github.com/trevordbunch)<br/>
 
-Name: YOUR NAME<br/>
+Name: James Gelok<br/>
 
-GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
+GitHub: [JamesGelok](https://github.com/JamesGelok)<br/>
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+- https://github.com/JamesGelok/cis411_lab3
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
@@ -15,9 +15,9 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "38a67929-7061-479d-a552-9ea7a2260689",
+      "name": "James Gelok",
+      "email": "jdgelok@gmail.com"
     }
   }
 }
@@ -26,7 +26,7 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['cislab']
 ```
 
 # Step 4: Exercising the application / generating performance data
@@ -34,10 +34,22 @@ app_name: ['<YOUR APP NAME>']
 _Note: No lab notes required._
 
 # Step 5: Explore your performance data
-* What are your observations regarding the performance of this application? 
+* What are your observations regarding the performance of this application?
+
+It is performant on some queries but not others. It'd be interesting to specifically label which queries take the longest. So far, it seems like the queries where you were searching for a specific set of characters (looking for _containes the string everything?_, rather than _is everything the name of the type of bagel?_, takes longer.)
+
 * Is performance even or uneven? 
+
+It is even for the same queries, uneven for different ones.
+
 * Between queries and mutations, what requests are less performant? 
+
+Queries are less performant.
+
 * Among the less performant requests, which ones are the most problematic?
+
+Looking for _containes the string everything?_, rather than _is everything the name of the type of bagel?_, takes longer and is more problematic.
+
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
