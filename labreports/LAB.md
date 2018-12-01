@@ -23,7 +23,7 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
 }
 ```
 
-# Step 3: Signup for and configure the New Relic
+# Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
 app_name: ['<YOUR APP NAME>']
@@ -40,7 +40,7 @@ _Note: No lab notes required._
 * Among the less performant requests, which ones are the most problematic?
 
 # Step 6: Diagnosing an issue based on telemetry data
-* What segment(s) took the most time?
+* Within the transactions you're examining, what segment(s) took the most time?
 * Using New Relic, identify and record the least performant request(s).
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
 * Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).
@@ -49,7 +49,7 @@ _Note: No lab notes required._
 _Note: No lab notes required._
 
 # Step 8: [EXTRA CREDIT] Address the performance issue(s)
-For the purposes of gaining 25% _or even more extra credit_ on the assignment, perform any of the following:
+For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
 1. Adjust the diagnosed slow call(s) to improve performance. 
 2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
 2. Check in those changes and **note your solution(s)** in your lab report.
