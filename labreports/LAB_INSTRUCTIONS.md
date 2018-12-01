@@ -201,7 +201,7 @@ Explore a few more mutations and queries in GraphQL to create a good base of req
 # Step 5: Explore your performance data
 1. [Open (or log back into) New Relic](https://rpm.newrelic.com) and select your ```cislab``` (or whatever you chose to set the app_name configuration in your newrelic.js) application in the application list.
 2. **Observe and record** what the Overview page for your application has to tell you about the performance of your GraphQL service.
-3. At the bottom of the ```Overview``` page, click on your ```Host```, and **record** what it's telling you about the health/performance of your computer.
+3. At the bottom of the ```Overview``` page, click on your ```Host```, and **record** what it's telling you about the health/performance of your compute device.
 4. Go back to the ```Overview``` page and click on an entry under the ```Transactions``` list called ```post /```.
 5. Scroll down to the section marked ```Transaction traces``` and click on a long-running transaction. What **segment** of the transaction took the most time?
 6. **Repeat step 5 for 3 other transactions**.
