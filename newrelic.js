@@ -9,11 +9,11 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['My Application'],
+  app_name: ['cislab'],
   /**
    * Your New Relic license key.
    */
-  license_key: 'license key here',
+  license_key: 24cd868c033cfbaa9c59120365e60b20ec259da6,
   logging: {
     /**
      * Level at which to log. 'trace' is most useful to New Relic when diagnosing
