@@ -2,12 +2,13 @@
 Course: Messiah College CIS 411, Fall 2018<br/>
 Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](https://github.com/trevordbunch)<br/>
 
-Name: YOUR NAME<br/>
+Name: Andrew Douglass<br/>
 
-GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
+GitHub: [douglassjohnandrew](https://github.com/douglassjohnandrew)<br/>
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+- The URL of my forked repository<br/>
+https://github.com/douglassjohnandrew/cis411_lab3
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
