@@ -16,9 +16,9 @@ https://github.com/douglassjohnandrew/cis411_lab3
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "a8066310-3eb6-41e9-a44f-9d79af78d6d4",
+      "name": "Andrew Douglass",
+      "email": "ad1373@messiah.edu"
     }
   }
 }
