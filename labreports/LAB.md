@@ -23,6 +23,7 @@ https://github.com/douglassjohnandrew/cis411_lab3
   }
 }
 ```
+![Alt text](/screenshots/graphql.PNG?raw=true "GraphQL response")
 
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
