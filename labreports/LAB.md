@@ -33,7 +33,9 @@ app_name: ['cislab']
 
 # Step 4: Exercising the application / generating performance data
 
-_Note: No lab notes required._
+_Note: No lab notes required._<br/><br/>
+Proof that I configured New Relic:<br/>
+![Alt text](/screenshots/newrelic.png?raw=true "New Relic proof")
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
