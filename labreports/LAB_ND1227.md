@@ -26,7 +26,7 @@ GitHub: [nd1227](https://github.com/nd1227)<br/>
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: [Messiah College_2]
+app_name: ['Messiah College_2']
 ```
 
 # Step 4: Exercising the application / generating performance data
