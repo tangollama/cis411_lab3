@@ -38,9 +38,18 @@ Proof that I configured New Relic:<br/>
 ![Alt text](/screenshots/newrelic.png?raw=true "New Relic proof")
 
 # Step 5: Explore your performance data
-* What are your observations regarding the performance of this application? 
-* Is performance even or uneven? 
-* Between queries and mutations, what requests are less performant? 
+* What are your observations regarding the performance of this application?<br/>
+The application performs well under most circumstances, but a few transactions takes a lot more time than the others<br/>
+* The host information:
+```
+LAPTOP-CLC5KPGS 1 app instance
+
+Apdex	            Resp. time	 Throughput	  Error Rate	 CPU usage	 Memory
+0.17/0.1	     1,020ms	   1 rpm	    0.00%	   1 %	          110 MB
+```
+* Is performance even or uneven?<br/>
+Performance is uneven, because different queries require different pieces of info
+* Between queries and mutations, what requests are less performant?
 * Among the less performant requests, which ones are the most problematic?
 
 # Step 6: Diagnosing an issue based on telemetry data
