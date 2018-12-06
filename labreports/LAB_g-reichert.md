@@ -40,13 +40,17 @@ _Note: No lab notes required._
 The overview tells me what times web transactions were completed, and the amount of miliseconds it took for it to be completed. The node and Response time are essentialy the same. The apdex score tells me how my app has been performing in response time, rating it from excellent to frusturating. There does not seem to be any error rate. Post time is taking up the majority of time and there is very little get time.
 
 * What are your observations regarding the performance of this application? 
-	It seems that it runs in an excellent manner most of the time, but occasionly the performance will drop signifigantly. 
+
+It seems that it runs in an excellent manner most of the time, but occasionly the performance will drop signifigantly. 
 * Is performance even or uneven? 
-	Uneven, the apdex score shows huge jumps and dips in the performance.
+
+Uneven, the apdex score shows huge jumps and dips in the performance.
 * Between queries and mutations, what requests are less performant? 
-	I believe the queries took longer to run than the mutations, but I was unable to find any specific data on New Relic pointing to this.
+
+I believe the queries took longer to run than the mutations, but I was unable to find any specific data on New Relic pointing to this.
 * Among the less performant requests, which ones are the most problematic?
-	The least performant requests were ones that ran the method "queryOrdersBySearchTerm".
+
+The least performant requests were ones that ran the method "queryOrdersBySearchTerm".
 
 The longest segment of transaction time was definetly "queryOrderBySearchTerm". The method took up 3 times the amount of the second highest at its best. It took up 3%-4% of the time, while the rest always took up 1% or less. 
 
@@ -55,13 +59,17 @@ The longest segment of transaction time was definetly "queryOrderBySearchTerm". 
 ![alt text](https://github.com/g-reichert/cis411_lab3/blob/master/lab3p3.png "Number 2")
 ![alt text](https://github.com/g-reichert/cis411_lab3/blob/master/lab3p4.png "Number 3")
 * Within the transactions you're examining, what segment(s) took the most time?
-	Any transaction that uses "queryOrderBySearchTerm" will take much longer, as the method was most likely written or included in a sub-optimal manner.
+
+Any transaction that uses "queryOrderBySearchTerm" will take much longer, as the method was most likely written or included in a sub-optimal manner.
 * Using New Relic, identify and record the least performant request(s).
-	The least performant requests are searching for people from texas or those who ordered and "everything"
+
+The least performant requests are searching for people from texas or those who ordered and "everything"
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
-	The least performant request permiatation is "queryOrderBySearchTerm"
+
+The least performant request permiatation is "queryOrderBySearchTerm"
 * Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).
-	I would look again at the method which is causing the most signifigant issues. There is either something incorrect with it, or it was not implemented efficently. 
+
+I would look again at the method which is causing the most signifigant issues. There is either something incorrect with it, or it was not implemented efficently. 
 	
 
 # Step 7: Submitting a Pull Request
