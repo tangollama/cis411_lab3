@@ -45,7 +45,7 @@ The application performs well under most circumstances, but a few transactions t
 LAPTOP-CLC5KPGS 1 app instance
 
 Apdex	            Resp. time	 Throughput	  Error Rate	 CPU usage	 Memory
-0.17/0.1	     1,020ms	   1 rpm	    0.00%	   1 %	          110 MB
+0.17/0.1	     1,020ms	   1 rpm	    0.00%	   1 %	         110 MB
 ```
 * Is performance even or uneven?<br/>
 Performance is uneven, because different queries require different pieces of info
