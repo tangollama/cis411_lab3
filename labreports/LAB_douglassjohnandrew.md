@@ -48,15 +48,53 @@ Apdex	            Resp. time	 Throughput	  Error Rate	 CPU usage	 Memory
 0.17/0.1	     1,020ms	   1 rpm	    0.00%	   1 %	         110 MB
 ```
 * Is performance even or uneven?<br/>
-Performance is uneven, because different queries require different pieces of info
-* Between queries and mutations, what requests are less performant?
-* Among the less performant requests, which ones are the most problematic?
+Performance is uneven, because different queries take different amounts of time. Some queries take less than a second, but others take up to 15 seconds. A rare few even took over 100 seconds somehow, but that could just be my slow ancient laptop
+* Between queries and mutations, what requests are less performant?<br/>
+Mutations generally were far quicker than queries in what I tested. Queries, depending on what was being queried, would take anywhere from 1 second to 15 seconds
+* Among the less performant requests, which ones are the most problematic?<br/>
+Any query that uses queryOrdersBySearchTerm a lot. Essentially, any query that takes more than 2-3 seconds.
 
 # Step 6: Diagnosing an issue based on telemetry data
-* Within the transactions you're examining, what segment(s) took the most time?
-* Using New Relic, identify and record the least performant request(s).
-* Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
-* Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).
+* Within the transactions you're examining, what segment(s) took the most time?<br/>
+Easily the remainder category / component, which I do not know what it does. The second most time-consuming segment (likely the first most time-consuming controllable segment) is the queryOrdersBySearchTerm component
+* Using New Relic, identify and record the least performant request(s).<br/>
+```
+{
+  #all orders containing the word PA
+  orders(query: "PA") {
+    id
+    customer {
+      id
+      email
+    }
+    items {
+      label
+      quantity
+    }
+  }
+}
+```
+But by far the worst query was this, taking nearly a minute:
+```
+{
+  #retrieve all orders container the word everything
+  orders(query: "everything") {
+    id
+    customer {
+      id
+      email
+    }
+    items {
+      label
+      quantity
+    }
+  }
+}
+```
+* Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.<br/>
+As mentioned previously, the Remainder component took up 3/4 of the time in practically every transaction. The queryOrdersBySearchTerm would be the next most problematic, because of the number of times loadOrderById() is called
+* Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).<br/>
+For any query that takes a long time in the queryOrdersBySearchTerm component, the query should be optimized to call loadOrderById far fewer times, essentially accessing individual pieces of data less often to save resources
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
