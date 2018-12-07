@@ -58,6 +58,7 @@ Any query that uses queryOrdersBySearchTerm a lot. Essentially, any query that t
 * Within the transactions you're examining, what segment(s) took the most time?<br/>
 Easily the remainder category / component, which I do not know what it does. The second most time-consuming segment (likely the first most time-consuming controllable segment) is the queryOrdersBySearchTerm component
 * Using New Relic, identify and record the least performant request(s).<br/>
+What I initially thought the worst request was:
 ```
 {
   #all orders containing the word PA
@@ -74,7 +75,7 @@ Easily the remainder category / component, which I do not know what it does. The
   }
 }
 ```
-But by far the worst query was this, taking nearly a minute:
+But by far the worst query ended up being this, taking nearly a minute:
 ```
 {
   #retrieve all orders container the word everything
