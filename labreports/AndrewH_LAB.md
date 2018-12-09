@@ -34,23 +34,23 @@ app_name: ['thebestcislab']
 _Note: No lab notes required._
 
 # Step 5: Explore your performance data
-* What are your observations regarding the performance of this application? 
+* What are your observations regarding the performance of this application?<br/>
   It spikes whenever a query takes too long
-* Is performance even or uneven? 
+* Is performance even or uneven?<br/> 
   It is uneven
-* Between queries and mutations, what requests are less performant? 
+* Between queries and mutations, what requests are less performant?<br/> 
   mutations
-* Among the less performant requests, which ones are the most problematic?
+* Among the less performant requests, which ones are the most problematic?<br/>
   I found Remainder, queryOrdersBySearchTerm, ExpressJs
   
 # Step 6: Diagnosing an issue based on telemetry data
-* Within the transactions you're examining, what segment(s) took the most time?
+* Within the transactions you're examining, what segment(s) took the most time?<br/>
   Remainder - 131,000ms
-* Using New Relic, identify and record the least performant request(s).
+* Using New Relic, identify and record the least performant request(s).<br/>
   getOrders - 0.333ms
-* Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
+* Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.<br/>
   The slowest components in each of the requests are queryOrdersBySearchTerm, Middleware: <anonymous>, loadOrderById, post /, 	  Middleware: jsonParser, getOrders, Remainder, 
-* Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).
+* Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).<br/>
   GraphQL tries to grab the least amount of data possible so by specifying everything the performace of the program falls off so in order to mitigate this we would want to break down the query into smaller chunks. 
   
 # Step 7: Submitting a Pull Request
