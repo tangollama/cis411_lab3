@@ -2,9 +2,9 @@
 Course: Messiah College CIS 411, Fall 2018<br/>
 Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](https://github.com/trevordbunch)<br/>
 
-Name: YOUR NAME<br/>
+Name: Andrew Hoffman<br/>
 
-GitHub: [YOUR_HANDLE](https://github.com/PinlekDLies)<br/>
+GitHub: [PinlekDLies](https://github.com/PinlekDLies)<br/>
 
 # Step 1: Fork this repository
 - The [URL](https://github.com/PinlekDLies/cis411_lab3) of my forked repository
