@@ -4,10 +4,10 @@ Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](http
 
 Name: YOUR NAME<br/>
 
-GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
+GitHub: [YOUR_HANDLE](https://github.com/PinlekDLies)<br/>
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+- The [URL](https://github.com/PinlekDLies/cis411_lab3) of my forked repository
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
@@ -15,9 +15,9 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "debd6188-7b7c-4b56-877d-663248a54fab",
+      "name": "YOUR FULL NAME",
+      "email": "YOUR EMAIL"
     }
   }
 }
@@ -26,7 +26,7 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['thebestcislab']
 ```
 
 # Step 4: Exercising the application / generating performance data
@@ -35,16 +35,24 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
+  It spikes whenever a query takes too long
 * Is performance even or uneven? 
+  It is uneven
 * Between queries and mutations, what requests are less performant? 
+  mutations
 * Among the less performant requests, which ones are the most problematic?
-
+  I found Remainder, queryOrdersBySearchTerm, ExpressJs
+  
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
+  Remainder - 131,000ms
 * Using New Relic, identify and record the least performant request(s).
+  getOrders - 0.333ms
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
+  The slowest components in each of the requests are queryOrdersBySearchTerm, Middleware: <anonymous>, loadOrderById, post /, 	  Middleware: jsonParser, getOrders, Remainder, 
 * Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).
-
+  GraphQL tries to grab the least amount of data possible so by specifying everything the performace of the program falls off so in order to mitigate this we would want to break down the query into smaller chunks. 
+  
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
 
