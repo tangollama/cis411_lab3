@@ -1,0 +1,108 @@
+# Lab Report Template for CIS411_Lab3
+Course: Messiah College CIS 411, Fall 2018<br/>
+Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](https://github.com/trevordbunch)<br/>
+
+Name: Jared Butler<br/>
+
+GitHub: [jb1763](https://github.com/jb1763)<br/>
+
+# Step 1: Fork this repository
+- The URL of my forked repository
+https://github.com/jb1763/cis411_lab3
+
+# Step 2: Clone your forked repository from the command line
+- My GraphQL response from adding myself as an account on the test project
+```
+{
+  "data": {
+    "mutateAccount": {
+      "id": "9efd9973-761f-430d-840b-235601a28d25",
+      "name": "Jared Butler",
+      "email": "jb1763@messiah.edu"
+    }
+  }
+}
+```
+
+# Step 3: Signup for and configure New Relic
+- The chosen name of your New Relic ```app_name``` configuration
+```
+app_name: ['Jared Buler Lab 3']
+```
+
+# Step 4: Exercising the application / generating performance data
+
+_Note: No lab notes required._
+
+# Step 5: Explore your performance data
+* What are your observations regarding the performance of this application?
+
+Overall, the performance seems pretty bad. Of the 6 jobs it runs, 4 were rated as frustrating level, 1 was tolerable, and one was successful.
+
+* Is performance even or uneven?
+
+Uneven.
+
+* Between queries and mutations, what requests are less performant?
+
+Queries
+
+* Among the less performant requests, which ones are the most problematic?
+
+retrieve all orders containing the word everything
+
+
+# Step 6: Diagnosing an issue based on telemetry data
+* Within the transactions you're examining, what segment(s) took the most time?
+
+Remainder
+getOrders/queryOrdersBySearchTerm
+
+* Using New Relic, identify and record the least performant request(s).
+
+retrieve all orders containing the word everything
+
+* Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
+
+Middleware<Anonymous>/getOrders/queryOrdersBySearchTerm
+
+* Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).
+
+Reduce the number of times getOrder needs to be invoked inside of getOrders.
+Each of these is another DB query, if we can get a list of results from a single DB result set instead of needing 890+ DB requests,
+we could significantly reduce the time of this request.
+'''
+Current Version
+
+const getOrders = (parent, args, context, info) => {
+    return new Promise(resolve => {
+        newrelic.startSegment('getOrders', false, () => {
+            queryOrders(args).then(results => {
+                resolve(results)
+            })
+        })
+    })
+}
+'''
+
+'''
+Suggested change
+
+const getOrders = (parent, args, context, info) => {
+    return new Promise(resolve => {
+        newrelic.startSegment('getOrders', false, () => {
+            resolve(queryOrders(args.query))
+            })
+        })
+    })
+}
+'''
+
+# Step 7: Submitting a Pull Request
+_Note: No lab notes required._
+
+# Step 8: [EXTRA CREDIT] Address the performance issue(s)
+For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
+1. Adjust the diagnosed slow call(s) to improve performance.
+2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
+3. Check in those changes and **note your solution(s)** in your lab report.
