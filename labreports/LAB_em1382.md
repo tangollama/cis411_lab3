@@ -2,12 +2,12 @@
 Course: Messiah College CIS 411, Fall 2018<br/>
 Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](https://github.com/trevordbunch)<br/>
 
-Name: YOUR NAME<br/>
+Name: Ellis Madagan<br/>
 
-GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
+GitHub: [em1382](https://github.com/em1382)<br/>
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+- The URL of my forked repository: https://github.com/em1382/cis411_lab3
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
@@ -15,9 +15,9 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "d9410440-ddca-43f4-b6f5-79a3bd865889",
+      "name": "Ellis Madagan",
+      "email": "em1382@messiah.edu"
     }
   }
 }
@@ -26,7 +26,7 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['cislab']
 ```
 
 # Step 4: Exercising the application / generating performance data
@@ -34,16 +34,41 @@ app_name: ['<YOUR APP NAME>']
 _Note: No lab notes required._
 
 # Step 5: Explore your performance data
-* What are your observations regarding the performance of this application? 
+* What are your observations regarding the performance of this application?
+  * The performance is nothing to write home about. Overall, pretty bad.
 * Is performance even or uneven? 
-* Between queries and mutations, what requests are less performant? 
+  * Uneven.
+* Between queries and mutations, what requests are less performant?
+  * Queries.
 * Among the less performant requests, which ones are the most problematic?
+  * "Retrieve all orders containing the word 'everything'" stood out the most to me.
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
+
+`getOrders/queryOrdersBySearchTerm`
+
 * Using New Relic, identify and record the least performant request(s).
+
+"Retrieve all orders containing the word 'everything'".
+
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
+
+`Middleware<Anonymous>/getOrders/queryOrdersBySearchTerm`
+
 * Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).
+
+We can reduce the number of times `getOrder` needs to be invoked inside of `getOrders`.
+```
+const getOrders = (parent, args, context, info) => {
+    return new Promise(resolve => {
+        newrelic.startSegment('getOrders', false, () => {
+              resolve(queryOrders(args.query))
+            })
+        })
+    })
+}
+```
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
