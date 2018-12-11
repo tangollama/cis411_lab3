@@ -35,7 +35,7 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application?
-** Hello World
+  * Hello World
 * Is performance even or uneven? 
 * Between queries and mutations, what requests are less performant? 
 * Among the less performant requests, which ones are the most problematic?
