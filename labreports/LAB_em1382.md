@@ -48,6 +48,17 @@ _Note: No lab notes required._
 * Using New Relic, identify and record the least performant request(s).
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
 * Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).
+We can reduce the number of times ```getOrder``` needs to be invoked inside of ```getOrders```.
+```
+const getOrders = (parent, args, context, info) => {
+    return new Promise(resolve => {
+        newrelic.startSegment('getOrders', false, () => {
+              resolve(queryOrders(args.query))
+            })
+        })
+    })
+}
+```
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
