@@ -26,7 +26,7 @@ GitHub: [tw1255](https://github.com/tw1255)<br/>
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<cislab>']
+app_name: ['cislab']
 ```
 
 # Step 4: Exercising the application / generating performance data
