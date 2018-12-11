@@ -35,10 +35,13 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application?
-  * Hello World
+  * The performance is nothing to write home about. Overall, pretty bad.
 * Is performance even or uneven? 
-* Between queries and mutations, what requests are less performant? 
+  * Uneven.
+* Between queries and mutations, what requests are less performant?
+  * Queries.
 * Among the less performant requests, which ones are the most problematic?
+  * "Retrieve all orders containing the word 'everything'" stood out the most to me.
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
