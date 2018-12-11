@@ -26,7 +26,7 @@ GitHub: [nd1227](https://github.com/nd1227)<br/>
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['Messiah College_2']
+app_name: ['cislab']
 ```
 
 # Step 4: Exercising the application / generating performance data
@@ -34,9 +34,18 @@ app_name: ['Messiah College_2']
 _Note: No lab notes required._
 
 # Step 5: Explore your performance data
-* What are your observations regarding the performance of this application? 
-* Is performance even or uneven? 
-* Between queries and mutations, what requests are less performant? 
+* What are your observations regarding the performance of this application?
+```
+Pertaining to the error rate of this application, it is sitting at 45.80%.  This is extremely high, however, I believe that this is because the final provided query does not run properly, which I think was intended.  When attempting to fix this query to successfully run, I still failed, cuasing the error rate to further rise.
+ ```
+* Is performance even or uneven?
+```
+Performance is uneven.
+```
+* Between queries and mutations, what requests are less performant?
+```
+Requests that require searching more than a compartamentalized table are less performant.  For example, when looking for state, the query looks directly in the location table, which compartamentalizes the request to 50 options.  However, when looking for all orders that contain the word "everything", the query must look through more records.
+```
 * Among the less performant requests, which ones are the most problematic?
 
 # Step 6: Diagnosing an issue based on telemetry data
