@@ -45,7 +45,13 @@ _Note: No lab notes required._
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
+
+`getOrders/queryOrdersBySearchTerm`
+
 * Using New Relic, identify and record the least performant request(s).
+
+"Retrieve all orders containing the word 'everything'".
+
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
 
 `Middleware<Anonymous>/getOrders/queryOrdersBySearchTerm`
