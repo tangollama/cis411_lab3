@@ -47,11 +47,23 @@ Performance is uneven.
 Requests that require searching more than a compartamentalized table are less performant.  For example, when looking for state, the query looks directly in the location table, which compartamentalizes the request to 50 options.  However, when looking for all orders that contain the word "everything", the query must look through more records.
 ```
 * Among the less performant requests, which ones are the most problematic?
+```
+The most problematic requests were the ones in which a general query of word containment was made.  By this, I mean that the requests that weren't searching specific tables, or categories, took a lot longer and sometimes returned an error.
+```
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
+```
+The "Expressjs: post /" segment took the most time.  The least performant request was the gmail query, which returned an error and did not complete its iteration.
+```
 * Using New Relic, identify and record the least performant request(s).
+```
+The least performant request was the gmail query, which returned an error and did not complete its iteration.
+```
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
+```
+
+```
 * Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).
 
 # Step 7: Submitting a Pull Request
