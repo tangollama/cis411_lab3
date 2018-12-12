@@ -7,7 +7,7 @@ Name: Ben Underwood<br/>
 GitHub: [benunderw](https://github.com/benunderw)<br/>
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+- https://github.com/benunderw/cis411_lab3
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
