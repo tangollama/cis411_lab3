@@ -18,10 +18,9 @@ mutation {
 }
 ```
 
-**![](blob:https://euangoddard.github.io/b15db7d5-dbb4-4ffe-955e-ec4d0afc04cb)** 
+**![]![alt text](https://github.com/da1238/cis411_lab1/blob/master/labreports/Untitled%20Diagram.png)** 
 
-Step 4: Exercising the application / generating performance data
-================================================================
+# Step 4: Exercising the application / generating performance data
 
 1\. #all orders containing the word PA
 
@@ -31,27 +30,25 @@ Step 4: Exercising the application / generating performance data
 
 ![](blob:https://euangoddard.github.io/54eab81a-da4d-41e2-bb7e-fac639cfd1aa)
 
-Step 5: Explore your performance data
-=====================================
+# Step 5: Explore your performance data
 
 *** I zoomed in on the overview graph by accident and couldn't figure out how to zoom out. ***
 
-2
+Step 2
 
 ![](blob:https://euangoddard.github.io/d9a8bb3e-063c-4534-8cd0-7a3f437ebbe8)
 
-3
+Step 3
 
 ![](blob:https://euangoddard.github.io/19ba4e55-9357-48bc-90a2-928bad724b28)
 
-4
+Step 4
 
 ![](blob:https://euangoddard.github.io/6335228a-f317-45b1-bc25-bb72bfe4e776)
 
-Step 6: Diagnosing an issue based on telemetry data
-===================================================
+# Step 6: Diagnosing an issue based on telemetry data
 
-1.    
+Step 1   
 ```
 {
   #retrieve all orders container the word everything
@@ -69,4 +66,3 @@ Step 6: Diagnosing an issue based on telemetry data
 }
 ```
 
-![](blob:https://euangoddard.github.io/52920b59-a4c6-4cae-bbc7-6b4374b8ec5f)
