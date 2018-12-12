@@ -35,13 +35,19 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
-* Is performance even or uneven? 
-* Between queries and mutations, what requests are less performant? 
+Ans: Everything is running smoothly. No violations or errors occured. Response time is averaging at 4 seconds.
+* Is performance even or uneven?
+Ans:The performance was uneven, due to some queries being larger than others.
+* Between queries and mutations, what requests are less performant?
+Ans:Queries are less performant. 
 * Among the less performant requests, which ones are the most problematic?
+Ans:The queries that pull more data are more problematic.
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
+Ans: Orders containing the words "PA" and "everything" took the most time.
 * Using New Relic, identify and record the least performant request(s).
+Ans: Orders containing the onion and raisen bagel took the least performance.
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
 * Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).
 
