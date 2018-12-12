@@ -2,9 +2,9 @@
 Course: Messiah College CIS 411, Fall 2018<br/>
 Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](https://github.com/trevordbunch)<br/>
 
-Name: YOUR NAME<br/>
+Name: Nik Sloop<br/>
 
-GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
+GitHub: [nik-sloop](https://github.com/nik-sloop)<br/>
 
 # Step 1: Fork this repository
 - The URL of my forked repository
@@ -16,8 +16,8 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
   "data": {
     "mutateAccount": {
       "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "name": "Nik Sloop",
+      "email": ns1302@messiah.edu"
     }
   }
 }
@@ -26,7 +26,7 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['cis411_lab3']
 ```
 
 # Step 4: Exercising the application / generating performance data
@@ -35,6 +35,7 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
+    It seemed like the performance was all over the place. I had some request that went through very fast, and others that were very slow. After looking at the data, there was a total of 5 transactions that were 'satisfied', 3 transactions that were 'tolerating' and 5 transactions that were 'frustrated". 
 * Is performance even or uneven? 
 * Between queries and mutations, what requests are less performant? 
 * Among the less performant requests, which ones are the most problematic?
