@@ -15,9 +15,9 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "e88098fc-d910-4560-ad1a-582794ce0555",
+      "name": "Wyatt R Derk",
+      "email": "wd1168@messiah.edu"
     }
   }
 }
