@@ -35,21 +35,22 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application?
+- Based on the data in the Apdex Score section, it appears as if this application does not run all that well. the values during request execution are routinely in the 'unacceptable' range.
 * Is performance even or uneven?
+- Uneven; some queries executed very quickly, and others took upwards of 25 seconds.
 * Between queries and mutations, what requests are less performant?
+- Queries
 * Among the less performant requests, which ones are the most problematic?
-
+- The query that requested every order containing "everything" was the one that took the most amount of time.
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
+- According to the data from the transaction trace, the segment that was the majority for me was called "Remainder". It doesn't seem to be any specific piece of software, it's just time that's being eaten up doing nothing.
 * Using New Relic, identify and record the least performant request(s).
-* Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
-* Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).
+- The least performant request was the one about searching every order that contained the word "everything".
+* Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
+- The 'Remainder' portion of the request is the most problematic, taking up 69% of the time required for the whole request. The next most problematic segment was the queryOrdersBySearchTerm, which tells me the sorting algorithm used to sort by the order type is not very efficient.
+* Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
+- Changing the algorithm to sort the data more efficiently would make the request more timely. In addition, whatever is causing the large amount of time spent in the "Remainder" segment should be examined and removed, if possible. 
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
-
-# Step 8: [EXTRA CREDIT] Address the performance issue(s)
-For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
-1. Adjust the diagnosed slow call(s) to improve performance.
-2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
-2. Check in those changes and **note your solution(s)** in your lab report.

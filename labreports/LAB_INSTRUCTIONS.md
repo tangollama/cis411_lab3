@@ -10,7 +10,7 @@ The purpose of this lab is to expose students to the base concepts surrounding m
 Update/simplify the code in this lab once the New Relic nodejs agent has more complete support for the Apollo Server.
 
 ## Submitting work
-Lab reports will be submitted by generating a markdown file in the labreports directory under the naming convention: **LAB_[GITHUB HANDLE].md**, and submitting a Pull Request to this repository that include your lab report as well as any accompanying images/files (there are diagrams required in the lab content). 
+Lab reports will be submitted by generating a markdown file in the labreports directory under the naming convention: **LAB_[GITHUB HANDLE].md**, and submitting a Pull Request to this repository that include your lab report as well as any accompanying images/files (there are diagrams required in the lab content).
 
 * Throughout these instructions, you'll find that **items marked in bold text** reference content you are to submit in your lab report.
 * For the purposes of clear communication, you may base your lab report off of the template found in [LAB.md](LAB.md), but you're also free, welcome, and encouraged to get more creative.
@@ -50,7 +50,7 @@ mutation {
 7. Stop your service with a ```Ctrl+C```, as we need to setup New Relic for telemetry acquisition.
 
 # Step 3: Signup for and configure New Relic
-In its downloaded state, the project will run successfully but fail to record any performance data to New Relic because you must follow the [installation instructions for the New Relic nodejs agent](https://docs.newrelic.com/docs/agents/nodejs-agent/installation-configuration/install-nodejs-agent). There's a great 4-minute video on the nodejs installation process [here]((https://docs.newrelic.com/docs/agents/nodejs-agent/installation-configuration/install-nodejs-agent)), under the heading, _View installation video_. 
+In its downloaded state, the project will run successfully but fail to record any performance data to New Relic because you must follow the [installation instructions for the New Relic nodejs agent](https://docs.newrelic.com/docs/agents/nodejs-agent/installation-configuration/install-nodejs-agent). There's a great 4-minute video on the nodejs installation process [here]((https://docs.newrelic.com/docs/agents/nodejs-agent/installation-configuration/install-nodejs-agent)), under the heading, _View installation video_.
 
 To accomplish the necessary configuration, perform the following.
 
@@ -82,7 +82,7 @@ app_name: ['cislab'],
 ![New Relic application performance overview](../assets/newrelic_app_overview.png "New Relic application performance overview")
 
 12. Go back to the ```Overview``` page and click on an entry under the ```Transactions``` list called ```post /```.
-13. Find the linked titled ```Track as key transaction``` and click it. 
+13. Find the linked titled ```Track as key transaction``` and click it.
 
 # Step 4: Exercising the application / generating performance data
 Open a web browser to ```http://localhost:4000/graphql```  and run the following series of GraphQL requests:
@@ -121,7 +121,7 @@ Open a web browser to ```http://localhost:4000/graphql```  and run the following
 ```
 {
   #all orders with an item that contains an onion bagel
-  
+
   orders(bagel: "onion") {
     id
     customer {
@@ -188,10 +188,7 @@ Open a web browser to ```http://localhost:4000/graphql```  and run the following
   #all accounts that contain gmail.com
   accounts(query: "gmail.com") {
     id
-    items {
-      label
-      quantity
-    }
+    name
   }
 }
 ```
@@ -225,7 +222,7 @@ Once you've completed your report markdown, have ensured that your forked reposi
 
 # Step 8: [EXTRA CREDIT] fix the performance issue(s)
 For the purposes of gaining 25% _or even more extra credit_ on the assignment, perform the following:
-1. Adjust the diagnosed slow call(s) to improve performance. 
+1. Adjust the diagnosed slow call(s) to improve performance.
 2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
 2. Check in those changes and **note your solution(s)** in your lab report.
 
