@@ -62,9 +62,13 @@ The least performant request was the gmail query, which returned an error and di
 ```
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
 ```
-
+The most problematic segment within the transaction trace is the queryOrdersBySearchTerm.  This component takes the most amount of time, besides the "Remainder", and slows the segment down considerably.  This segment took 
+34,500 ms (99.07% of the total time).
 ```
 * Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).
+```
+A solution to these problematic requests would be to expedite the database processes.  For example, the database processes and functions, search and order, the data could remain unstructured until it is needed to be sorted.  By having a term be at the end of the alphabet, ordering the data would not make sense, and sending the search through the data in an unstructured manner may yield a faster response time.
+```
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
