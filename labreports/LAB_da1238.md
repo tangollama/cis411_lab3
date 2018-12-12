@@ -1,30 +1,22 @@
-## CIS 411 Lab 3
+# CIS 411 Lab 3
 
-**Step 2**
+## Step 2
 
 1.  Run the following GraphQL mutation in GraphiQL and **record the response**.
 
+```
 mutation {
-
-  mutateAccount(input: {
-
-   email: "YOUR EMAIL"
-
-    name: "YOUR FULL NAME"
-
-    mutation: "add"
-
-  }) {
-
-    id
-
-    name
-
-    email
-
-  }
-
+  mutateAccount(input: {
+    email: "YOUR EMAIL"
+    name: "YOUR FULL NAME"
+    mutation: "add"
+  }) {
+    id
+    name
+    email
+  }
 }
+```
 
 **![](blob:https://euangoddard.github.io/b15db7d5-dbb4-4ffe-955e-ec4d0afc04cb)** 
 
@@ -60,33 +52,21 @@ Step 6: Diagnosing an issue based on telemetry data
 ===================================================
 
 1.    
-
+```
 {
-
-  #retrieve all orders container the word everything
-
-  orders(query: "everything") {
-
-    id
-
-    customer {
-
-      id
-
-      email
-
-    }
-
-    items {
-
-      label
-
-      quantity
-
-    }
-
-  }
-
+  #retrieve all orders container the word everything
+  orders(query: "everything") {
+    id
+    customer {
+      id
+      email
+    }
+    items {
+      label
+      quantity
+    }
+  }
 }
+```
 
 ![](blob:https://euangoddard.github.io/52920b59-a4c6-4cae-bbc7-6b4374b8ec5f)
