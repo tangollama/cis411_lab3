@@ -72,6 +72,6 @@ For the purposes of gaining 25% extra credit on the assignment, perform any of t
   - the (query:"everything") has ben given the changes I suggested above. 
 2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
   - here is the performance before the query https://github.com/SamMahan/cis411_lab3/blob/master/labreports/before.JPG
-  - here is the performance after (see right) https://github.com/SamMahan/cis411_lab3/commit/ac43f0e13307bf64869b65ef588c65ffb99f6fd7
+  - here is the performance after (see right) https://github.com/SamMahan/cis411_lab3/blob/master/labreports/after.JPG
 2. Check in those changes and **note your solution(s)** in your lab report.
   - here is the link to that commit https://github.com/SamMahan/cis411_lab3/commit/ac43f0e13307bf64869b65ef588c65ffb99f6fd7
