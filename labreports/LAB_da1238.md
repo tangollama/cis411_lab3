@@ -18,7 +18,7 @@ mutation {
 }
 ```
 
-**![]![alt text](https://github.com/da1238/cis411_lab1/blob/master/labreports/Untitled%20Diagram.png)** 
+**![]![alt text](https://github.com/da1238/cis411_lab3/blob/master/labreports/1.png)** 
 
 # Step 4: Exercising the application / generating performance data
 
