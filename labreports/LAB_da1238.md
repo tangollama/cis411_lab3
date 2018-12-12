@@ -18,17 +18,17 @@ mutation {
 }
 ```
 
-**![]![alt text](https://github.com/da1238/cis411_lab3/blob/master/labreports/1.png)** 
+![alt text](https://github.com/da1238/cis411_lab3/blob/master/labreports/1.png)
 
 # Step 4: Exercising the application / generating performance data
 
 1\. #all orders containing the word PA
 
-![](blob:https://euangoddard.github.io/13c790ee-83ef-4d0e-870b-b61d9eabd5e5)
+![alt text](https://github.com/da1238/cis411_lab3/blob/master/labreports/2.png)
 
 2\. #all orders in Pennsylvania
 
-![](blob:https://euangoddard.github.io/54eab81a-da4d-41e2-bb7e-fac639cfd1aa)
+![alt text](https://github.com/da1238/cis411_lab3/blob/master/labreports/3.png)
 
 # Step 5: Explore your performance data
 
@@ -36,15 +36,15 @@ mutation {
 
 Step 2
 
-![](blob:https://euangoddard.github.io/d9a8bb3e-063c-4534-8cd0-7a3f437ebbe8)
+![alt text](https://github.com/da1238/cis411_lab3/blob/master/labreports/4.png)
 
 Step 3
 
-![](blob:https://euangoddard.github.io/19ba4e55-9357-48bc-90a2-928bad724b28)
+![alt text](https://github.com/da1238/cis411_lab3/blob/master/labreports/5.png)
 
 Step 4
 
-![](blob:https://euangoddard.github.io/6335228a-f317-45b1-bc25-bb72bfe4e776)
+![alt text](https://github.com/da1238/cis411_lab3/blob/master/labreports/6.png)
 
 # Step 6: Diagnosing an issue based on telemetry data
 
