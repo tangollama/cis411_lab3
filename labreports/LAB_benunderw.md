@@ -2,12 +2,12 @@
 Course: Messiah College CIS 411, Fall 2018<br/>
 Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](https://github.com/trevordbunch)<br/>
 
-Name: YOUR NAME<br/>
+Name: Ben Underwood<br/>
 
-GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
+GitHub: [benunderw](https://github.com/benunderw)<br/>
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+- https://github.com/benunderw/cis411_lab3
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
@@ -15,9 +15,9 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "fb53dda9-ff18-44a8-8112-3d52eb0b91a4",
+      "name": "Benjamin Lee Underwood",
+      "email": "bu1157@messiah.edu"
     }
   }
 }
@@ -26,7 +26,7 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['cislab']
 ```
 
 # Step 4: Exercising the application / generating performance data
@@ -38,6 +38,8 @@ _Note: No lab notes required._
 * Is performance even or uneven? 
 * Between queries and mutations, what requests are less performant? 
 * Among the less performant requests, which ones are the most problematic?
+
+Some of the queries were fast, some were slow. The first query took a bit of time, but returned quickly when it ran again. Performance was uneven, but only because each query was requesting different types of data that were easier/more difficult to process. The given commands were all queries, and they all seemed to take some time to load. I assume mutations would take less time generally, but if they were combined with a query, they might still take some time. The most "problematic" queries were ones that returned a lot of results.
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
