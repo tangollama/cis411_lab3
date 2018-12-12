@@ -2,12 +2,12 @@
 Course: Messiah College CIS 411, Fall 2018<br/>
 Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](https://github.com/trevordbunch)<br/>
 
-Name: YOUR NAME<br/>
+Name: Rebekah McClelland <br/>
 
-GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
+GitHub: [@rebbymcc](https://github.com/rebbymcc)<br/>
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+[URL](https://github.com/rebbymcc/cis411_lab3) of forked repository
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
@@ -15,9 +15,9 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "297f270b-f286-465d-83b0-903e5e12f9dc",
+      "name": "Rebekah McClelland",
+      "email": "rm1400@messiah.edu"
     }
   }
 }
@@ -26,7 +26,7 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['cislab']
 ```
 
 # Step 4: Exercising the application / generating performance data
@@ -34,16 +34,24 @@ app_name: ['<YOUR APP NAME>']
 _Note: No lab notes required._
 
 # Step 5: Explore your performance data
-* What are your observations regarding the performance of this application? 
+* What are your observations regarding the performance of this application?
+  **My observations regarding the performance of this application is that the response time is slightly under the node. 
 * Is performance even or uneven? 
+  **This performance is uneven
 * Between queries and mutations, what requests are less performant? 
+  **Requests that are queries are less performant.
 * Among the less performant requests, which ones are the most problematic?
+  **Orders by search term. 
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
+  **general queries that were not very specific took the most amount of time. 
 * Using New Relic, identify and record the least performant request(s).
+  **The 6th request (query: "everything") was the least performant. 
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
+  **The 6th request (query:"everything") was the least performant. 
 * Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).
+  **Using more specific queries would help improve the performance of these requests. 
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
