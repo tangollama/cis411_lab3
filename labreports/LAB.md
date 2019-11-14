@@ -2,12 +2,12 @@
 Course: Messiah College CIS 411, Fall 2018<br/>
 Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](https://github.com/trevordbunch)<br/>
 
-Name: YOUR NAME<br/>
+Name: Issa Houck<br/>
 
-GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
+GitHub: [icepop450](https://github.com/icepop450)<br/>
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+https://github.com/icepop450/cis411_lab3
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
@@ -15,9 +15,9 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "79a209a8-ec2f-4cc1-bfa1-a96c719f991e",
+      "name": "Issac Houck",
+      "email": "ih1163@messiah.edu"
     }
   }
 }
@@ -26,7 +26,7 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['cislab']
 ```
 
 # Step 4: Exercising the application / generating performance data
