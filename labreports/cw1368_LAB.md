@@ -29,8 +29,6 @@ GitHub: [Cweaver136](https://github.com/Cweaver136)<br/>
 app_name: ['CIS 411 Lab 3']
 ```
 
-# Step 4: Exercising the application / generating performance data
-
 # Step 5: Explore your performance data
 
 - My Host
