@@ -1,44 +1,66 @@
-# Lab Report Template for CIS411_Lab3
 Course: Messiah College CIS 411, Fall 2018<br/>
 Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](https://github.com/trevordbunch)<br/>
 
-Name: YOUR NAME<br/>
+Name: Leanne Weaver<br/>
 
-GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
+GitHub: [Leanne-Weaver](https://github.com/Leanne-Weaver)<br/>
 
-# Step 1: Fork this repository
-- The URL of my forked repository
+# Step 1: Fork this repository :heavy_check_mark:
+- The URL of [my forked repository](https://github.com/Leanne-Weaver/cis411_lab3)
 
-# Step 2: Clone your forked repository from the command line
+# Step 2: Clone your forked repository from the command line :heavy_check_mark:
 - My GraphQL response from adding myself as an account on the test project
 ```
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "bf31549a-0562-481e-84ed-88fe0a6aa57e",
+      "name": "Leanne Weaver",
+      "email": "lw1298@messiah.edu"
     }
   }
 }
 ```
 
-# Step 3: Signup for and configure New Relic
+# Step 3: Signup for and configure New Relic 
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['Tango with Llamas']
 ```
 
-# Step 4: Exercising the application / generating performance data
+# Step 4: Exercising the application / generating performance data :heavy_check_mark:
 
 _Note: No lab notes required._
 
 # Step 5: Explore your performance data
-* What are your observations regarding the performance of this application? 
-* Is performance even or uneven? 
-* Between queries and mutations, what requests are less performant? 
-* Among the less performant requests, which ones are the most problematic?
 
+* What are your observations regarding the performance of this application? 
+Some queries take much longer than others. However, there are no errors, so this
+application is reliable, yet lacking in efficiency.
+* Is performance even or uneven? 
+The performance is uneven across different queries; however, it's fairly even when it
+comes to the same query.
+* Between queries and mutations, what requests are less performant? 
+Mutations are much quicker than queries, so queries are less performant.
+* Among the less performant requests, which ones are the most problematic?
+The following query was the most problematic:
+```
+{
+  #retrieve all orders container the word everything
+  orders(query: "everything") {
+    id
+    customer {
+      id
+      email
+    }
+    items {
+      label
+      quantity
+    }
+  }
+}
+``` 
+It took 42.6 seconds to respond. 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
 * Using New Relic, identify and record the least performant request(s).
