@@ -2,7 +2,7 @@
 Course: Messiah College CIS 411, Fall 2018<br/>
 Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](https://github.com/trevordbunch)<br/>
 
-Name: YOUR NAME<br/>
+Name: Cory Collette<br/>
 
 GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
 
