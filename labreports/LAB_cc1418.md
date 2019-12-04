@@ -38,23 +38,23 @@ _Note: No lab notes required._
 	My longest transaction spent the most time in the "remainder" section.
 	Other transactions spent most of their time in middleware, remainder, and midddleware again.
 
-* What are your observations regarding the performance of this application?
+* What are your observations regarding the performance of this application?<br/>
 	At the very least, the application works. You can submit queries to it, and it will return relevant data. 
-* Is performance even or uneven? 
+* Is performance even or uneven? <br/>
 	The performance is uneven. Some queries take excessive amounts of time compared to some that happen almost instantly. 
-* Between queries and mutations, what requests are less performant? 
+* Between queries and mutations, what requests are less performant? <br/>
 	Queries are the less performant.
-* Among the less performant requests, which ones are the most problematic?
+* Among the less performant requests, which ones are the most problematic?<br/>
 	The ones returning greater amounts of data are the most problematic. 
 
 # Step 6: Diagnosing an issue based on telemetry data
-* Within the transactions you're examining, what segment(s) took the most time?
+* Within the transactions you're examining, what segment(s) took the most time?<br/>
 	"Remainder" is the segment that took the most time. 
-* Using New Relic, identify and record the least performant request(s).
+* Using New Relic, identify and record the least performant request(s).<br/>
 	The requests that are least performant are "queryOrdersBySearchTerm" requests. They perform searches based on a specified term, whereas other searches are based on details like "BagelType"
-* Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
+* Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.<br/>
 	Within the trace details, it looks like the specific request to query by search term takes up almost the entirety of the time taken to process the request. 
-* Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).
+* Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).<br/>
 	Instead of being allowed to search by an entered term, I think the process should be limited to only allow the user to search by prespecified categories and terms, as is the case when searching by bagel type. Instead of searching for records with the term "everything", the system should instead only search for the term "everything" within the categroy of bagel type. This would cut down on the system needing to sort through every piece of information in each record. 
 
 # Step 7: Submitting a Pull Request
