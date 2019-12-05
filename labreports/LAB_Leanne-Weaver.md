@@ -77,10 +77,10 @@ The segment that takes up the most time is `queryOrdersBySearchTerm`.
 Using `bagel: "everything"` rather than `query: "everything"` improves the performance tremendously. 
 This is because the application searches under the "bagel" parameter of the order rather than every
 attribtue of every order in the database.
-# Step 7: Submitting a Pull Request
+# Step 7: Submitting a Pull Request :heavy_check_mark:
 _Note: No lab notes required._
 
-# Step 8: [EXTRA CREDIT] Address the performance issue(s)
+# Step 8: [EXTRA CREDIT] Address the performance issue(s) :heavy_check_mark:
 For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
 1. Adjust the diagnosed slow call(s) to improve performance. 
 2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
