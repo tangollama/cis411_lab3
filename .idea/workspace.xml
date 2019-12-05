@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec4a59cb-c3b8-4cd9-beaa-93d5327c29a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/labreports/LAB.md" beforeDir="false" afterPath="$PROJECT_DIR$/labreports/LAB.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +17,8 @@
         <entry file="file://$PROJECT_DIR$/labreports/LAB.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="289">
-                <caret line="38" column="51" lean-forward="true" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
+              <first_editor relative-caret-position="170">
+                <caret line="10" column="78" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="78" />
               </first_editor>
               <second_editor />
             </state>
@@ -39,8 +38,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="244" />
+    <option name="x" value="9" />
+    <option name="y" value="243" />
     <option name="width" value="984" />
     <option name="height" value="1104" />
   </component>
@@ -81,12 +80,13 @@
       <option name="presentableId" value="Default" />
       <updated>1575430886505</updated>
       <workItem from="1575430889159" duration="691000" />
-      <workItem from="1575468698299" duration="3101000" />
+      <workItem from="1575468698299" duration="4985000" />
+      <workItem from="1575505940214" duration="931000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3792000" />
+    <option name="totallyTimeSpent" value="6607000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
@@ -144,8 +144,8 @@
     <entry file="file://$PROJECT_DIR$/labreports/LAB.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="289">
-            <caret line="38" column="51" lean-forward="true" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
+          <first_editor relative-caret-position="170">
+            <caret line="10" column="78" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="78" />
           </first_editor>
           <second_editor />
         </state>
