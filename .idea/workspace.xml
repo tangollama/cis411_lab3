@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec4a59cb-c3b8-4cd9-beaa-93d5327c29a8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labreports/LAB.md" beforeDir="false" afterPath="$PROJECT_DIR$/labreports/LAB.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labreports/LAB_INSTRUCTIONS.md" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +16,8 @@
         <entry file="file://$PROJECT_DIR$/labreports/LAB.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="170">
-                <caret line="10" column="78" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="78" />
+              <first_editor relative-caret-position="-87">
+                <caret line="73" column="167" selection-start-line="73" selection-start-column="167" selection-end-line="73" selection-end-column="167" />
               </first_editor>
               <second_editor />
             </state>
@@ -81,12 +80,12 @@
       <updated>1575430886505</updated>
       <workItem from="1575430889159" duration="691000" />
       <workItem from="1575468698299" duration="4985000" />
-      <workItem from="1575505940214" duration="931000" />
+      <workItem from="1575505940214" duration="1289000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6607000" />
+    <option name="totallyTimeSpent" value="6965000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
@@ -144,8 +143,8 @@
     <entry file="file://$PROJECT_DIR$/labreports/LAB.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="170">
-            <caret line="10" column="78" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="78" />
+          <first_editor relative-caret-position="-87">
+            <caret line="73" column="167" selection-start-line="73" selection-start-column="167" selection-end-line="73" selection-end-column="167" />
           </first_editor>
           <second_editor />
         </state>
