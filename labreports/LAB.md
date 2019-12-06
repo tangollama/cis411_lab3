@@ -2,12 +2,13 @@
 Course: Messiah College CIS 411, Fall 2018<br/>
 Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](https://github.com/trevordbunch)<br/>
 
-Name: YOUR NAME<br/>
+Name: William Webb<br/>
 
-GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
+GitHub: [ww1173](https://github.com/ww1173)<br/>
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+- The URL of my forked repository:
+ https://github.com/ww1173/cis411_lab3
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
@@ -15,9 +16,9 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "f2a10341-292f-4689-8825-1e4056f5cca2",
+      "name": "William Webb",
+      "email": "ww1173@messiah.edu"
     }
   }
 }
@@ -26,7 +27,7 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['cislab']
 ```
 
 # Step 4: Exercising the application / generating performance data
@@ -35,15 +36,25 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
+    All mutations ran quickly while the queries seemed to take longer.
 * Is performance even or uneven? 
+    Seems to be rather uneven
 * Between queries and mutations, what requests are less performant? 
+    Queries
 * Among the less performant requests, which ones are the most problematic?
+    Expressjs: post / took the longest consistantly.
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
+    Expressjs: post /
 * Using New Relic, identify and record the least performant request(s).
-* Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
+    the second to last request took the longest and performed the poorest
+* Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation 
+is/are the most problematic and record your findings.
+ The 'Remainder' and 'queryOrdersBySearchTerm' were listed as the two slowest segments.
 * Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).
+    Querying took the longest so finding a way to increase that would benefit the application the most. A way 
+    that could be fixed is to query only the first 10 best matching results. 
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
