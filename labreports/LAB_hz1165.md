@@ -34,26 +34,26 @@ app_name: ['<411 lab>']
 _Note: No lab notes required._
 
 # Step 5: Explore your performance data
-![Overview page](../assets/overview.jpg)
-![health/performance of my compute device](../assets/host.jpg)
+![Overview page](https://github.com/hz1165/cis411_lab3/blob/master/assets/overview.JPG)</br>
+![health/performance of my compute device](https://github.com/hz1165/cis411_lab3/blob/master/assets/host.JPG)
 * What are your observations regarding the performance of this application? 
-  all the transactions are taking around 3000+ms
+  </br>All the transactions are taking around 3000+ms
 * Is performance even or uneven? 
-  all of them are taking similar times to complete
+  </br>All of them are taking similar times to complete
 * Between queries and mutations, what requests are less performant? 
-  the longest request took 3876ms
+  </br>The longest request took 3876ms
 * Among the less performant requests, which ones are the most problematic?
-  none of them were problematic
+  </br>None of them were problematic
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-  Remainder took 65% of the time
+  </br>Remainder took 65% of the time
 * Using New Relic, identify and record the least performant request(s).
-  ![least performant request](../assets/trace.jpg)
+  ![least performant request](https://github.com/hz1165/cis411_lab3/blob/master/assets/trace.JPG)
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
-  Remainder is taking the most time in multiple requests
+  </br>Remainder is taking the most time in multiple requests
 * Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).
-  Have more specific request, for example, instead of searching "everything", search "apple"
+  </br>Have more specific request, for example, instead of searching "everything", search "apple"
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
 
