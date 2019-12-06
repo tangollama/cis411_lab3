@@ -24,14 +24,14 @@
   },
   "homepage": "https://github.com/tangollama/cis411_lab0#readme",
   "dependencies": {
-    "apollo-server": "^2.2.2",
-    "graphql": "^14.0.2",
+    "apollo-server": "^2.9.9",
+    "graphql": "^14.5.8",
     "lodash.startcase": "^4.4.0",
-    "lokijs": "^1.5.5",
-    "newrelic": "^4.9.0",
-    "uuid": "^3.3.2"
+    "lokijs": "^1.5.8",
+    "newrelic": "^4.13.1",
+    "uuid": "^3.3.3"
   },
   "devDependencies": {
-    "nyc": "^13.1.0"
+    "nyc": "^13.3.0"
   }
 }
