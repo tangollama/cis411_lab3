@@ -31,8 +31,8 @@ app_name: ['411_Lab3']
 
 # Step 5: Eploring Performance Data
 
-![Overview Page]()
-![Host Health]()
+![Overview Page](https://github.com/TymeOfNight/cis411_lab3/blob/master2/assets/Overview_Page.png)
+![Host Health](https://github.com/TymeOfNight/cis411_lab3/blob/master2/assets/host.png)
 
 ### Examinations of long running traces:
 
