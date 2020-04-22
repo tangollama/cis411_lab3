@@ -40,7 +40,7 @@ The performance varies based on what queries are run, but it seems like most of 
 
 Edit: By looking in task manager, I was able to confirm my theory that the program is only using a single core, hence limiting its performance. 
 ~~~
-![System Performance](Dashboard2.png)
+![System Performance](Dashboard2.PNG)
 * Is performance even or uneven? 
 ~~~
 The performance is very uneven, with some transactions taking less than one second, and others taking up to 45 seconds. 
@@ -56,7 +56,7 @@ The query for everything was most problematic because it took 45 seconds to run 
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-![Main Dashboard](Dashboard1.png)
+![Main Dashboard](Dashboard1.PNG)
 ~~~
 As seen in the transaction time chart, the command that took the most time was the query for "everything". This query took 40-45 seconds to run, and was run twice for confirmation. The two large spikes on the performance graph are these two transactions. The second longest one was a query for "PA", which took just under 5 seconds. The small peak on the performance graph was this transaction. The rest of 
 ~~~
@@ -65,7 +65,7 @@ As seen in the transaction time chart, the command that took the most time was t
 The least performant requests were the ones where we were querying for "everything".
 ~~~
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
-![Time Percent Breakdown](TimeTable.png)
+![Time Percent Breakdown](TimeTable.PNG)
 ~~~
 Based on the results seen in the table in the transactions tab that breaks down time spent on each task, the Expressjs:post/ segment is taking on average 98.5% of the time spent on each transaction.
 ~~~
@@ -76,7 +76,7 @@ One solution that would speed up the operation of all transations would be to ad
 
 I did some experimentation with the speeds to see if I could get the queries to run faster. I always run a program that loads my CPU and GPUs to near 100% in the background to mine cryptocurrency. By disabling that program temporarily, the PC was able to dedicate more compute cycles to the processing of these transactions, and I was able to cut the time of the most problematic request from 45 seconds down to 18 seconds. Similar performance gain was seen on other transactions, such as the 5 second transaction being cut down to 2.2 seconds. This is still only single threaded, so a multithreaded application could see times as low as 1.1 seconds for the "everything" query on a 16 thread CPU under perfect scaling conditions.
 ~~~
-![Better Performance](Dashboard3.png)
+![Better Performance](Dashboard3.PNG)
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
 
