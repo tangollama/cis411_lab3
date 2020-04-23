@@ -45,20 +45,26 @@ CPU Usage: 3%
 Memory: 110 MB
 
 When working with this for the first time it is obvious that
-when doing a query the response time is much slower than anything else, especially when querying for everything.
+when doing a query the response time is much slower than 
+anything else, especially when querying for everything.
 ```
 * Is performance even or uneven? 
 ```
-Preformance is uneven, as some mutations/queries took around 1 second or 7 seconds, to another which took around 45 seconds.
+Preformance is uneven, as some mutations/queries took around 1 
+second or 7 seconds, to another which took around 45 seconds.
 ```
 * Between queries and mutations, what requests are less performant? 
 ```
-Queries are less preformant as we see when querying for "everything" it took around 44,000ms (45 seconds), and the only other query we do (that doesn't  result in an error) takes the second most amount of time, 7,000ms (7  seconds).
+Queries are less preformant as we see when querying for "everything" it took around 44,000ms (45 seconds), 
+and the only other query we do (that doesn't result in an 
+error) takes the second most amount of time, 7,000ms (7  seconds).
 ```
 * Among the less performant requests, which ones are the most problematic?
 
 ```
-A query that takes 45 seconds (in our case a query for everything) to respond in any case would be problematic as one should expect a faster response time from a query. Therefore, the query for "everything" is the most problematic.
+A query that takes 45 seconds (in our case a query for everything) 
+to respond in any case would be problematic as one should expect a faster response time from a query. 
+Therefore, the query for "everything" is the most problematic.
 ```
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
@@ -92,7 +98,9 @@ Remainder: 41,500ms -90% of duration
 * Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).
 
 ```
-in short, a query for everything in all fields is impractical, a more concise query is needed, the paramater must then be more specific to minimize the query response time, since it searches every category, one can make one that grabs all categories by searching one field. This is a prime example of a superfluous database call.
+in short, a query for everything in all fields is impractical, a more concise query is needed, 
+the paramater must then be more specific to minimize the query response time, since it searches every category, 
+one can make one that grabs all categories by searching one field. This is a prime example of a superfluous database call.
 
 ```
 
@@ -103,7 +111,8 @@ _Note: No lab notes required._
 For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
 1. Adjust the diagnosed slow call(s) to improve performance. 
 ```
-As stated in my answer for question 6 a more concise query is needed, therefore changing query to bagel the response time is improved.  The reason this works is becuase we were only interested in Everything bagels prior so instead of searching each field for the word everything we now only search the bagel field.
+As stated in my answer for question 6 a more concise query is needed, therefore changing query to bagel the response time is improved.  
+The reason this works is becuase we were only interested in Everything bagels prior so instead of searching each field for the word everything we now only search the bagel field.
 
 Change for the Everything Query:
 
@@ -136,7 +145,10 @@ Note: The bottom picture shows the transaction details with how long the request
 ![](images/everything_img2.jpg)
 
 ```
-Note: Following my answer for the "everything" query and how to make the response time shorter, i realized that for the PA location query the answer was another query we had already preformed, the picture below is a side by side of the two querys previously and how they returned the same schema but searching for  "PA" in every field took 7 seconds but just looking for it in the location field took 190 ms.
+Note: Following my answer for the "everything" query and how to make the response time shorter, i realized that for the PA 
+location query the answer was another query we had already preformed, the picture below is a side by side of the two 
+querys previously and how they returned the same schema but searching for  "PA" in every field took 7 seconds but just 
+looking for it in the location field took 190 ms.
 ```
 
 ![](images/ec_2.jpg)
