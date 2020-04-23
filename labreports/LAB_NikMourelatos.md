@@ -142,7 +142,8 @@ to around 190ms.
 ```
 2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
 ```
-Note: The bottom picture shows the transaction details with how long the request took to process, and the top picture shows the two requests side by side.
+Note: The bottom picture shows the transaction details with 
+how long the request took to process, and the top picture shows the two requests side by side.
 ```
 ![](images/everything_img1.jpg)
 ![](images/everything_img2.jpg)
