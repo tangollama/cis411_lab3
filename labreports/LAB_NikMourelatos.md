@@ -111,8 +111,10 @@ _Note: No lab notes required._
 For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
 1. Adjust the diagnosed slow call(s) to improve performance. 
 ```
-As stated in my answer for question 6 a more concise query is needed, therefore changing query to bagel the response time is improved.  
-The reason this works is becuase we were only interested in Everything bagels prior so instead of searching each field for the word everything we now only search the bagel field.
+As stated in my answer for question 6 a more concise query is needed, 
+therefore changing query to bagel the response time is improved.  
+The reason this works is becuase we were only interested in Everything bagels prior so instead of searching each field for 
+the word everything we now only search the bagel field.
 
 Change for the Everything Query:
 
