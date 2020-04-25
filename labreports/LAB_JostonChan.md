@@ -102,6 +102,8 @@ For example, changing the orders(query: "everything") to orders(bagel: "everythi
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
 
+![CircleCi Success](images/CircleCiSuccess.png) 
+
 # Step 8: [EXTRA CREDIT] Address the performance issue(s)
 For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
 1. Adjust the diagnosed slow call(s) to improve performance. 
