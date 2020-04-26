@@ -35,15 +35,23 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
+
 * Is performance even or uneven? 
+
 * Between queries and mutations, what requests are less performant? 
+
 * Among the less performant requests, which ones are the most problematic?
+
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
+
 * Using New Relic, identify and record the least performant request(s).
+
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
+
 * Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).
+
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
@@ -53,3 +61,4 @@ For the purposes of gaining 25% extra credit on the assignment, perform any of t
 1. Adjust the diagnosed slow call(s) to improve performance. 
 2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
 2. Check in those changes and **note your solution(s)** in your lab report.
+
