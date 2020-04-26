@@ -28,7 +28,7 @@
     "graphql": "^14.0.2",
     "lodash.startcase": "^4.4.0",
     "lokijs": "^1.5.5",
-    "newrelic": "^4.9.0",
+    "newrelic": "^4.13.1",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
