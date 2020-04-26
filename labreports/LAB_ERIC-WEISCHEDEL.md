@@ -42,7 +42,7 @@ _Note: No lab notes required._
 
 > Performance is *uneven*. As I said, `POST` requests are taking much longer than `GET` requests.
 
-* Between queries and mutations, what requests are less performant? 
+* Between queries and mutations, what requests are less performant?
 
 > Queries are less performant. Mutations are completed almost instantly, while queries generally take more time.
 
@@ -52,15 +52,37 @@ _Note: No lab notes required._
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
+
+> As I said, `POST` requests took the most time.
+
 * Using New Relic, identify and record the least performant request(s).
+
+```
+{
+  #retrieve all orders container the word everything
+  orders(query: "everything") {
+    id
+    customer {
+      id
+      email
+    }
+    items {
+      label
+      quantity
+    }
+  }
+}
+```
+
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
+
+> It looks like `queryOrdersBySearchTerm` is the slowest part of the request. Here is an image of the Transaction Trace:
+
+![Transaction Trace](tt.png)
+
 * Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).
+
+> The problem with these search queries is that they search all the fields in the order object. To make the computation faster, it could search only certain fields that would make sense for the search. For example, if you're searching for "everything", you are not looking for order id, customer id, customer email, or item quantity. By reducing the amount of properties that the search query is matched against, the request would take substantially less time.
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
-
-# Step 8: [EXTRA CREDIT] Address the performance issue(s)
-For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
-1. Adjust the diagnosed slow call(s) to improve performance. 
-2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
-2. Check in those changes and **note your solution(s)** in your lab report.
