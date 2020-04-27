@@ -201,18 +201,54 @@ Explore a few more mutations and queries in GraphQL to create a good base of req
 # Step 5: Explore your performance data
 1. [Open (or log back into) New Relic](https://rpm.newrelic.com) and select your ```cislab``` (or whatever you chose to set the app_name configuration in your newrelic.js) application in the application list.
 2. **Observe and record** what the Overview page for your application has to tell you about the performance of your GraphQL service.
+
+
+
 3. At the bottom of the ```Overview``` page, click on your ```Host```, and **record** what it's telling you about the health/performance of your compute device.
+
+The apdex is 0.89
+The Resp. time is 2,280 ms
+The Throughput is 1 rpm 
+The Error Rate is 3.64% 
+The CPU usage is 3%
+The Memory is 120 MB
 4. Go back to the ```Overview``` page and click on an entry under the ```Transactions``` list called ```post /```.
 5. Scroll down to the section marked ```Transaction traces``` and click on a long-running transaction. What **segment** of the transaction took the most time?
+
+loadOrderbyId took the longest in one
+
+
+
+
 6. **Repeat step 5 for 3 other transactions**.
-7. What are your observations regarding the performance of this application? Is performance even or uneven? Between queries and mutations, what requests are less [performant](https://en.wiktionary.org/wiki/performant)? Among the less performant requests, which ones are the most problematic?
+
+queryOrdersBySearchTerm took the most time another
+
+Middleware: anonymous took the longest in another
+
+Remainder took the longest in another
+
+7. What are your observations regarding the performance of this application? Is performance even or uneven?
+
+
+
+ Between queries and mutations, what requests are less [performant](https://en.wiktionary.org/wiki/performant)? Among the less performant requests, which ones are the most problematic?
+
+ 
 
 # Step 6: Diagnosing an issue based on telemetry data
 Amongst the requests in this GraphQL server, there is one specific permiatation of a request that is the most problematic (hint: I put it there on purpose).
 
-1. Using New Relic, **identify and record the least performant request(s)**.
+1. Using New Relic, **identify and record the least performant request(s)**. 
+The last query involving the gmail accounts was the least performant one 
+
 2. Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and **record your findings**.
+
+It was the query orders by search term that took the majority of time for that query
+
 3. **Recommend a solution** for improving the performance of those most problematic request(s) / permiatation(s).
+
+You can find easier ways to query/mutate requests by involving less terms or having terms that are less strenous on the system all at once.
 
 
 
