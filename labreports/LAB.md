@@ -48,7 +48,7 @@ The less performants are "queries by search term" which are categorized as queri
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-Queries that caterogized data/qualifications
+Queries that caterogized data/qualifications or personally, the remainder
 
 * Using New Relic, identify and record the least performant request(s).
 The last query involving the gmail accounts was the least performant one 
