@@ -28,10 +28,10 @@
     "graphql": "^14.0.2",
     "lodash.startcase": "^4.4.0",
     "lokijs": "^1.5.5",
-    "newrelic": "^4.9.0",
+    "newrelic": "^1.40.0",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "nyc": "^13.1.0"
+    "nyc": "^15.0.1"
   }
 }
