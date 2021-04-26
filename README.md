@@ -20,6 +20,14 @@ Detailed instructions are [here](LAB_INSTRUCTIONS.md), and you are expected to c
 ## 3. Submissions
 You are expected to create a lab report as a markdown file under the labreports directory using the **LAB_[GITHUB Handle].md** naming convention in your forked repository.  After you have reviewed your work, then you should submit a `Pull Request` to this repository with your lab report and any accompanying images/files (e.g., required diagrams).  Add the `Pull Request` URL into the courseroom LMS (Canvas) for grading.
 
+## 4. Grading Guidelines
+The following elements have been incorporated into your assignment rubric.
+1. **Justify Findings:** Each claim (e.g., Query 1 is the least performant.) is supported by data.
+2. **Investigate Alternatives:** All alternative explainations for system performance are considered in addition to system design faults are levied.
+3. **Pattern Recognition:** Patterns to queries or response segments may lead to larger conclusions about the system design.
+4. **Data Structures:** The data schema of the project can be used to infer the formation of queries and mutations.
+5. **Communication:**  The markdown file is written according to professional standards by choosing the appropriate markdown elements, links and embedded content.
+
 # Resources
 Lab Specific Help:
 - [Detailed instructions](LAB_INSTRUCTIONS.md)
