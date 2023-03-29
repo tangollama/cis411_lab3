@@ -10,6 +10,7 @@ ___
 
 # Step 1: Fork this repository
 - The URL of my forked repository
+- https://github.com/CuriousOcean/cis411_lab5_Monitoring
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
@@ -17,9 +18,9 @@ ___
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "id": "b5a6b687-b043-405a-9189-1be5b43b88b7",
+      "name": "Shane Wahlberg",
+      "email": "sw1419@messiah.edu"
     }
   }
 }
@@ -28,7 +29,7 @@ ___
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['<cis411>']
 ```
 
 # Step 4: Exercising the application / generating performance data
