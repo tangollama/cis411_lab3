@@ -63,4 +63,18 @@ _Note: No lab notes required._
 For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
 1. Adjust the diagnosed slow call(s) to improve performance. 
 2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
-2. Check in those changes and **note your solution(s)** in your lab report.
+   1. ![assets](../assets/lab5proof.PNG)
+   2. The top post is the most recent, where I changed the query from "everything" to specify to "everything bagel"
+   ```
+     orders(bagel: "everything") {
+    id
+    customer {
+      id
+      email
+    }
+    items {
+      label
+      quantity
+    }
+```
+3. Check in those changes and **note your solution(s)** in your lab report.
