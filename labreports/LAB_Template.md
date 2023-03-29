@@ -1,10 +1,12 @@
-# Lab Report Template for CIS411_Lab3
-Course: Messiah College CIS 411, Fall 2018<br/>
-Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](https://github.com/trevordbunch)<br/>
-
-Name: YOUR NAME<br/>
-
-GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)<br/>
+# Lab Report: Monitoring
+___
+**Course:** CIS 411, Spring 2021  
+**Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
+**Name:** 
+**GitHub Handle:** 
+**Repository:** Your Forked Repository  
+**Collaborators:** 
+___
 
 # Step 1: Fork this repository
 - The URL of my forked repository
@@ -35,15 +37,23 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
+  > Enter Response Here.
 * Is performance even or uneven? 
+  > Enter Response Here.
 * Between queries and mutations, what requests are less performant? 
+  > Enter Response Here.
 * Among the less performant requests, which ones are the most problematic?
+  > Enter Response Here.
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
+  > Enter Response Here.
 * Using New Relic, identify and record the least performant request(s).
-* Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permiatation is/are the most problematic and record your findings.
-* Recommend a solution for improving the performance of those most problematic request(s) / permiatation(s).
+  > Enter Response Here.
+* Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
+  > Enter Response Here.
+* Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
+  > Enter Response Here.
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
