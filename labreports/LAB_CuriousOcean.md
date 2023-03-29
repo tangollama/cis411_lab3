@@ -38,19 +38,19 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
-  > Enter Response Here.
+  > The response time of this app is 2536 ms and its throughput is 0.63 rpm. The error rate is 5.26%. The shortest response time was 0.22 seconds and the longest response time was 44 seconds, the everything bagel query. 
 * Is performance even or uneven? 
-  > Enter Response Here.
+  > Uneven. Some performed better than others. Some didn't even run.
 * Between queries and mutations, what requests are less performant? 
-  > Enter Response Here.
+  > Queries.
 * Among the less performant requests, which ones are the most problematic?
-  > Enter Response Here.
+  > queryOrdersBySearchTerm
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-  > Enter Response Here.
+  > Middleware: anonymous :anonymous took the most time. It took 91.8 ms. 
 * Using New Relic, identify and record the least performant request(s).
-  > Enter Response Here.
+  > queryOrdersBySearchTerm was the lest performant request. It took 41746.487 ms, about 98.31% of the process time.
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
   > Enter Response Here.
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
