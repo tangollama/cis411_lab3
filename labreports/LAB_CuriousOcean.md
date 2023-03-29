@@ -50,11 +50,11 @@ _Note: No lab notes required._
 * Within the transactions you're examining, what segment(s) took the most time?
   > Middleware: anonymous :anonymous took the most time. It took 91.8 ms. 
 * Using New Relic, identify and record the least performant request(s).
-  > queryOrdersBySearchTerm was the lest performant request. It took 41746.487 ms, about 98.31% of the process time.
+  > POST was the least performant. Granted, all of them came in as POST, but some requests came in with different speeds, granting me the ability to differeniate them. 
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
-  > Enter Response Here.
+  > queryOrdersBySearchTerm was the lest performant request. It took 41746.487 ms, about 98.31% of the process time.
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > Enter Response Here.
+  > I would recommend change the query information. For example, when querying for "everything", it should be more clear. Search by bagel type or toppings. Simply searching for "everything" sifts through a lot of data and ends up being a pain and adding strain on the system. 
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
